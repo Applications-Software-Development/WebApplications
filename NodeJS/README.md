@@ -1,8 +1,9 @@
-[READ FIRST AND AFTER CREATE A NEW BRANCH :) ]
+#[READ FIRST AND AFTER CREATE A NEW BRANCH :) ]
 
-[STAGE 1] NodeJS trainning
+Project state: A) NodeJS trainning
 
-Commit Stages for this Repo: [REVIEW]
+
+#Commit Stages for this Repo: [REVIEW]
 
 software_development
 
@@ -26,7 +27,7 @@ Notes:
 
 Git refusing to merge unrelated histories, so in this case use "--allow-unrelated-histories"
 
-[RULES]
+#[RULES]
 
 - If you have a generated output made by the code please create a .gitignore to exclude this files e.g. to exclude ".o" inside .gitignore write "*.o". This is to avoid to have changes after run the code.
 - In case of error in packages is possible to add new using: npm install <package> (local installation). 
