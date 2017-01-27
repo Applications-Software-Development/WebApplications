@@ -1,0 +1,11 @@
+1 - Execute the command
+	npm init
+
+2 - Execute the command:
+	npm install express
+	
+3 - Run the server:
+	node server.js
+
+4 - Open the browser:
+	localhost:8080
