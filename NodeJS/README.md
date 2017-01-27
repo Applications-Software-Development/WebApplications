@@ -1,4 +1,6 @@
-NodeJS trainning
+[FIRST CREATE A NEW BRANCH]
+
+[STAGE 1] NodeJS trainning
 
 Commit Stages for this Repo: [REVIEW]
 
