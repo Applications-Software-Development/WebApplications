@@ -9,7 +9,7 @@ software_development
 
 Phases to commit:
 
-1- Create a local branch "git checkout -b ", the "feature" should be in the following format: "sw_webapp_"feature"_vX"
+1- Create a local branch "git checkout -b feature", the "feature" should be in the following format: "sw_webapp_"feature"_vX"
 
 2- Commit the changes with some description "git commit -m "my description""
 
