@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+.jumbotron{
+    background-color: #fff;
+    min-height: 100%;
+    min-height: 100vh;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.green{
+    background-color:  #249B98  ;
+}
+
+.yellow{
+    background-color: #F9D22D;
+}
+
+h1 {  
+    font-size: 36px !important;
+    margin-bottom:15px;
+    text-align: center;
+    font-weight: 400;
+    color: #312f2b;
+    line-height:1.1em;
+    font-family:'Open Sans', Arial, sans-serif;
+}
+
+h5 {
+    font-size: 20px;
+    margin-bottom:15px;
+    text-align: center;
+    font-weight: 400;
+    color: #312f2b;
+    line-height:1.1em;
+    font-family:'Open Sans', Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 4px;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #312f2b;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+
+div {
+    position:relative;
+}
+
+body {
+    background:#fff;
+    color: #444;
+    font-size: 16px;
+    font-weight:300;
+    font-family:'Open Sans', Arial, sans-serif;
+}
+
+::-moz-selection {
+    background-color: #FFD801;
+}
+::selection {
+    background-color: #FFD801;
+}
+
+strong {
+    font-weight:700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    font-family:'Open Sans', Arial, sans-serif;
+}
+
+input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 12px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 4px;
+    height: 60px;
+    margin-bottom:30px;
+}
+
+input[type=text] {
+    background: rgba(227, 231, 228, 1);
+    font-family: 'Open Sans', sans serif;
+    border: 0;
+    font-size:16px;
+    text-align: left;
+    vertical-align: middle;
+    height: 60px;
+    margin-bottom:30px;
+}
+
+input[type=text]:focus {
+    background: #a9cce3;
+    color: #555;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    transition: background 0.25 ease-in;
+    -moz-transition: background 0.25 ease-in;
+    -webkit-transition: background 0.25 ease-in;
+}
+
+input[type=submit] {
+    color: #fff;
+    background: #43413e !important;
+    height: 60px;
+    text-shadow: none;
+    font-size: 16px;   
+}
+
+input[type=submit]:hover,  input[type=submit]:active {
+    background: #43413e !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    transition: background 0.25 ease-in;
+    -moz-transition: background 0.25 ease-in;
+    -webkit-transition: background 0.25 ease-in;
+}
+
+footer {
+    background: #2b2b2b;
+    text-align: center;
+    color: #ddd;
+    padding:50px 0 50px;
+    position:relative;
+}
+
+.btn {
+    color: #fff;
+    text-shadow: none;
+    font-size: 16px;
+    padding: 11px 19px;
+    letter-spacing: 0.05em;
+    border: 0;
+    text-transform: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    background-color: #545454;
+    border-color: none;
+    *background-color: #545454;
+    background-image: none;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    filter: none;
+    border: none;
+    *border: 0;
+}
+
+.btn:visited {
+    color: #fff;
+}
+
+.btn:hover {
+    background: #333 !important;
+}
+
+.btn:hover,.btn:focus,.btn:active {
+    color: #fff;
+    background-color: #333;
+}
+
+.btn.btn-theme:hover {
+    background: #333 !important;
+}

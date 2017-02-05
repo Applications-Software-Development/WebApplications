@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Company Manager</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ajax.js"></script>
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1><strong>COMPANY</strong> MANAGER</h1>
+                <img src="img/company.png" alt="Package" style="width:210px;height:210px;">
+            </div>
+        </div>
+
+        <!-- Comapany -->
+
+        <div class="jumbotron green">
+            <div class="container text-center">
+                <div class="row">
+                    <h1>Insert company</h1>
+                    <h5><strong>QUERY</strong>: INSERT INTO company (name) VALUES (?) </h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form id="form_insert_company">
+                            <h5 id="insert_company"></h5>
+                            <input type="text" name="name_insert_company" placeholder="The name" required/>
+                            <input type="submit" value="Criar" class="btn btn-theme">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container text-center">
+                <div class="row">
+                    <h1>Consult companies</h1>
+                    <h5><strong>QUERY</strong>: SELECT id, name FROM company</h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div id="consult_companies">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <br/>
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form id="form_consult_companies">
+                            <input type="submit" value="Consult" class="btn btn-theme">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron yellow">
+            <div class="container text-center">
+                <div class="row">
+                    <h1>Delete a company</h1>
+                    <h5><strong>QUERY</strong>: DELETE FROM company WHERE id = ?</h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form id="form_delete_company">
+                            <h5 id="delete_company" class="text-center"></h5>
+                            <input type="text" name="numero_delete_company" placeholder="O numero" required/>
+                            <input type="submit" value="Apagar" class="btn btn-theme">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container text-center">
+                <div class="row">
+                    <h1>Consult company's employees</h1>
+                    <h5><strong>QUERY</strong>:  SELECT employee.id, employee.name, employee.email, employee.address, plant.name, plant.country FROM employee INNER JOIN plant on employee.plant_id = plant.id INNER JOIN company on company.id = plant.company_id WHERE company.name = ?</h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div id="consult_company_employees">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <br/>
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <form id="form_consult_company_employees">
+                                <input type="text" name="name_consult_company_employees" placeholder="The company name" required/>
+                                <input type="submit" value="Consult" class="btn btn-theme">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plant -->
+
+        <div class="jumbotron green">
+            <div class="container text-center">
+                <div class="row">
+                    <h1>Insert plant</h1>
+                    <h5><strong>QUERY</strong>: INSERT INTO plant (name, address, country, company_id) VALUES (?, ?, ?, ?)</h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form id="form_insert_plant">
+                            <h5 id="insert_plant"></h5>
+                            <input type="text" name="name_insert_plant" placeholder="The name" required/>
+                            <input type="text" name="address_insert_plant" placeholder="The address" required/>
+                            <input type="text" name="country_insert_plant" placeholder="The country" required/>
+                            <input type="text" name="company_id_insert_plant" placeholder="The company id" required/>
+                            <input type="submit" value="Criar" class="btn btn-theme">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container text-center">
+                <div class="row">
+                    <h1>Consult plants</h1>
+                    <h5><strong>QUERY</strong>: SELECT name, address, country, company_id FROM plant</h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div id="consult_plants">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <br/>
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form id="form_consult_plants">
+                            <input type="submit" value="Consult" class="btn btn-theme">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron yellow">
+            <div class="container text-center">
+                <div class="row">
+                    <h1>Delete plant</h1>
+                    <h5><strong>QUERY</strong>: DELETE FROM plant WHERE id = ?</h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form id="form_delete_plant">
+                            <h5 id="delete_plant" class="text-center"></h5>
+                            <input type="text" name="id_delete_plant" placeholder="The id" required/>
+                            <input type="submit" value="Delete" class="btn btn-theme">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employee -->
+
+        <div class="jumbotron green">
+            <div class="container text-center">
+                <div class="row">
+                    <h1>Insert employee</h1>
+                    <h5><strong>QUERY</strong>: INSERT INTO employee (name, email, address, plant_id, plant_company_id) VALUES(?, ?, ?, ?, ?)</h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form id="form_insert_employee">
+                            <h5 id="insert_employee" class="text-center"></h5>
+                            <input type="text" name="name_insert_employee" placeholder="The name" required/>
+                            <input type="text" name="email_insert_employee" placeholder="The email" required/>
+                            <input type="text" name="address_insert_employee" placeholder="The address" required/>
+                            <input type="text" name="plant_id_insert_employee" placeholder="The plant" required/>
+                            <input type="text" name="plant_company_insert_employee" placeholder="The company" required/>
+                            <input type="submit" value="Criar" class="btn btn-theme">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container text-center">
+                <div class="row">
+                    <h1>Consult employees</h1>
+                    <h5><strong>QUERY</strong>: SELECT id, name, email, address, plant_id, plant_company_id FROM employee</h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div id="consult_employees">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <br/>
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form id="form_consult_employees">
+                            <input type="submit" value="Consult" class="btn btn-theme">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron yellow">
+            <div class="container text-center">            
+                <div class="row">
+                    <h1>Delete employee</h1>
+                    <h5><strong>QUERY</strong>: DELETE FROM employee WHERE id = ?</h5>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <form id="form_delete_employee">
+                            <h5 id="delete_employee" class="text-center"></h5>
+                            <input type="text" name="id_delete_employee" placeholder="The id" required/>
+                            <input type="submit" value="Delete" class="btn btn-theme">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        Simple project with Ajax/PHP/MySQL handling <strong> asynchronous</strong> requests.	
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
