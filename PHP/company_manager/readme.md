@@ -1,8 +1,8 @@
-COMPANY MANAGER
+#COMPANY MANAGER
 
 This website is a simple way to interact between ajax, php and MySQL asynchronously. It has a modular way to execute queries and retreive the data via JSON.
 
-To use this project, first create the database. The steps bellow will help you do that:
+#To use this project, first create the database. The steps bellow will help you do that:
 	- Open the database/model.mwb file. You'll need MySQL Workbench.
 	- In the MySQL Workbench you'll need to either Syncrhonize Model or Forward Engineer.
 		- Syncrhonize Model (best solution)
